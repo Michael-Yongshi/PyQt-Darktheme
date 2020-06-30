@@ -1,5 +1,10 @@
 # Gui_Dark_Theme
 
+install a test version through pypi
+```
+https://test.pypi.org/project/yongshi-guidarktheme/
+```
+
 ## License
 
 Licensed under GPL-3.0-or-later, see LICENSE file for details.
