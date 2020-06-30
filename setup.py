@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="Michael-Yongshi_Gui-Dark-Theme", # Replace with your own username
-    version="1.0.1",
+    name="yongshi-guidarktheme",
+    version="1.0.0",
     author="Michael-Yongshi",
     author_email="4registration@outlook.com",
     description="A dark theme desktop gui package",
