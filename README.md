@@ -1,4 +1,4 @@
-# Gui_Dark_Theme
+# Gui Dark Theme
 
 install a test version through pypi
 ```
