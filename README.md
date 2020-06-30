@@ -2,7 +2,7 @@
 
 install a test version through pypi
 ```
-https://test.pypi.org/project/yongshi-guidarktheme/
+pip install yongshi-guidarktheme
 ```
 
 ## License
