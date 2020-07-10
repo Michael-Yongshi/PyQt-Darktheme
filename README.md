@@ -5,6 +5,10 @@ install a test version through pypi
 pip install yongshi-guidarktheme
 ```
 
+## How to
+widget_template.py consists of some customized dark themed pyqt5 classes
+decorators.py consists of 2 decorators to use (wait cursor and normal cursor) including inputdialogs and messageboxes that set the cursor back to normal automatically.
+
 ## License
 
 Licensed under GPL-3.0-or-later, see LICENSE file for details.
