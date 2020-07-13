@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="yongshi-guidarktheme",
-    version="1.1.0",
+    version="1.1.1",
     author="Michael-Yongshi",
     author_email="4registration@outlook.com",
     description="A dark theme desktop gui package",

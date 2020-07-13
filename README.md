@@ -1,13 +1,85 @@
 # Gui Dark Theme
 
-install a test version through pypi
+## Install
 ```
 pip install yongshi-guidarktheme
 ```
 
-## How to
-widget_template.py consists of some customized dark themed pyqt5 classes
-decorators.py consists of 2 decorators to use (wait cursor and normal cursor) including inputdialogs and messageboxes that set the cursor back to normal automatically.
+## Dark Theme settings
+### Import
+To import the dark theme
+```
+from guidarktheme.widget_template import QDarkPalette
+```
+
+### How to
+```
+class QMainApplication(QApplication):
+    """A Dark styled application."""
+    def __init__(self, *__args):
+        super().__init__(*__args)
+        
+        QFontDatabase.addApplicationFont("source/schoensperger.otf")
+        self.setStyle("Fusion")
+        self.setPalette(QDarkPalette())
+        # self.setFont(QFont("schoensperger", 20))
+        self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
+```
+
+## Clickable Widgets
+### Import
+To import the dark themed widgets, i.e. a clickable label widget
+```
+from guidarktheme.widget_template import QClickLabel
+```
+
+or to just import everything
+```
+from guidarktheme.widget_template import *
+```
+
+### How to
+```
+label = QClickLabel()
+label.setText('This label is clickable')
+label.clicked.connect(clicklabel)
+
+def clicklabel:
+    print("This label is clicked")
+```
+
+## Decorators
+### Import
+To import the decorators
+```
+from guidarktheme.decorators import (
+    Decorators,
+    QInputDialogUserInterruption,
+    QMessageBoxUserInterruption,
+)
+```
+
+### How to
+to add a loading cursor to a called method:
+```
+@Decorators.loading_cursor
+```
+
+to revert back to normal cursor for some reason, usually for user input requests:
+```
+@Decorators.user_input_interruption
+```
+
+
+to use input dialogs that automatically reverts to normal arrow and back to loading cursor after input is done:
+```
+result, okPressed = QInputDialogUserInterruption.getText(
+    self, "User input requested", "This dialog box shows a regular cursor, letting the user know input is possible"
+    )
+
+if result and okPressed:
+    print(result)
+```
 
 ## License
 
