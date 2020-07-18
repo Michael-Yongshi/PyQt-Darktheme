@@ -1,8 +1,12 @@
 # Gui Dark Theme
 
+## Version
+### 1.1
+1.1.1   Changed pip name to pyqt-darktheme
+
 ## Install
 ```
-pip install yongshi-guidarktheme
+pip install pyqt-darktheme
 ```
 
 ## Dark Theme settings

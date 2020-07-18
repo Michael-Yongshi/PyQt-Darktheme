@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="yongshi-guidarktheme",
+    name="pyqt-darktheme",
     version="1.1.1",
     author="Michael-Yongshi",
     author_email="4registration@outlook.com",
