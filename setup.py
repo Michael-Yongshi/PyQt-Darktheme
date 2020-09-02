@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyqt-darktheme",
-    version="1.1.1",
+    version="1.2.1",
     author="Michael-Yongshi",
     author_email="4registration@outlook.com",
     description="A dark theme desktop gui package",
