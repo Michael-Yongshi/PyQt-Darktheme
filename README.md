@@ -1,4 +1,4 @@
-# Gui Dark Theme
+# pyqt-darktheme
 
 ## Version
 ### 1.1
@@ -65,7 +65,7 @@ from guidarktheme.decorators import (
 
 ### How to
 to add a loading cursor to a called method:
-```
+```PyQt
 @Decorators.loading_cursor
 ```
 
@@ -75,7 +75,7 @@ to revert back to normal cursor for some reason, usually for user input requests
 ```
 
 
-to use input dialogs that automatically reverts to normal arrow and back to loading cursor after input is done:
+to use input dialogs that automatically reverts to normal arrow and back to loadingPyQt cursor after input is done:
 ```
 result, okPressed = QInputDialogUserInterruption.getText(
     self, "User input requested", "This dialog box shows a regular cursor, letting the user know input is possible"
