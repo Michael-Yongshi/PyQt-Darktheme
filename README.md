@@ -13,7 +13,7 @@ pip install pyqt-darktheme
 ### Import
 To import the dark theme
 ```
-from guidarktheme.widget_template import QDarkPalette
+from pyqt-darktheme.widget_template import DarkPalette
 ```
 
 ### How to
@@ -23,10 +23,8 @@ class QMainApplication(QApplication):
     def __init__(self, *__args):
         super().__init__(*__args)
         
-        QFontDatabase.addApplicationFont("source/schoensperger.otf")
         self.setStyle("Fusion")
-        self.setPalette(QDarkPalette())
-        # self.setFont(QFont("schoensperger", 20))
+        self.setPalette(DarkPalette())
         self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
 ```
 
@@ -34,12 +32,12 @@ class QMainApplication(QApplication):
 ### Import
 To import the dark themed widgets, i.e. a clickable label widget
 ```
-from guidarktheme.widget_template import QClickLabel
+from pyqt-darktheme.widget_template import QClickLabel
 ```
 
 or to just import everything
 ```
-from guidarktheme.widget_template import *
+from pyqt-darktheme.widget_template import *
 ```
 
 ### How to
@@ -56,7 +54,7 @@ def clicklabel:
 ### Import
 To import the decorators
 ```
-from guidarktheme.decorators import (
+from pyqt-darktheme.decorators import (
     Decorators,
     QInputDialogUserInterruption,
     QMessageBoxUserInterruption,
