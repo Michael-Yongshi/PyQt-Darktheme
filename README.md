@@ -3,6 +3,8 @@
 ## Version
 ### 1.1
 1.1.1   Changed pip name to pyqt-darktheme
+### 1.2
+1.2.3   Changed folder name to darktheme
 
 ## Install
 ```
