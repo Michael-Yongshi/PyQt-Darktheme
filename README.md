@@ -15,7 +15,7 @@ pip install pyqt-darktheme
 ### Import
 To import the dark theme
 ```
-from pyqt-darktheme.widget_template import DarkPalette
+from darktheme.widget_template import DarkPalette
 ```
 
 ### How to
