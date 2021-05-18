@@ -34,12 +34,12 @@ class QMainApplication(QApplication):
 ### Import
 To import the dark themed widgets, i.e. a clickable label widget
 ```
-from pyqt-darktheme.widget_template import QClickLabel
+from darktheme.widget_template import QClickLabel
 ```
 
 or to just import everything
 ```
-from pyqt-darktheme.widget_template import *
+from darktheme.widget_template import *
 ```
 
 ### How to
@@ -56,7 +56,7 @@ def clicklabel:
 ### Import
 To import the decorators
 ```
-from pyqt-darktheme.decorators import (
+from darktheme.decorators import (
     Decorators,
     QInputDialogUserInterruption,
     QMessageBoxUserInterruption,
