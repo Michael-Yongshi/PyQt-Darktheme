@@ -43,6 +43,7 @@ class DarkPalette(QPalette):
         self.setColor(QPalette.Disabled, QPalette.Button, QColor(53, 53, 53))       #dark grey
         self.setColor(QPalette.Disabled, QPalette.ButtonText, QColor(25, 25, 25))   #darker grey
 
+
 class DarkApplication(QApplication):
     """A Dark styled application."""
     def __init__(self, *__args):
@@ -50,8 +51,10 @@ class DarkApplication(QApplication):
         
         self.setStyle("Fusion")
         self.setPalette(DarkPalette())
-        # self.setFont(QFont("schoensperger", 20))
-        self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
+        self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }"
+            "QCheckBox:disabled {color:#191919;}"
+            "QRadioButton:disabled {color:#191919;}"
+            "QWidget:disabled {color:#191919;}")
 
 class QClickWidget (QWidget):
     """A widget which is clickable"""
