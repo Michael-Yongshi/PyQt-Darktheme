@@ -13,6 +13,9 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/Michael-Yongshi/Gui-Dark-Theme",
     packages=setuptools.find_packages(),
+    install_requires=[
+        'PyQt5',
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
