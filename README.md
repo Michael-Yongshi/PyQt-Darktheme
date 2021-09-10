@@ -1,10 +1,12 @@
 # pyqt-darktheme
 
 ## Version
+### 1.2
+1.2.4   changed elements for tabs, radio buttons, and checkboxes
+1.2.3   Changed folder name to darktheme
 ### 1.1
 1.1.1   Changed pip name to pyqt-darktheme
-### 1.2
-1.2.3   Changed folder name to darktheme
+
 
 ## Install
 ```
@@ -15,19 +17,16 @@ pip install pyqt-darktheme
 ### Import
 To import the dark theme
 ```
-from darktheme.widget_template import DarkPalette
+from darktheme.widget_template import DarkApplication
 ```
 
 ### How to
 ```
-class QMainApplication(QApplication):
+class Application(DarkApplication):
     """A Dark styled application."""
+
     def __init__(self, *__args):
         super().__init__(*__args)
-        
-        self.setStyle("Fusion")
-        self.setPalette(DarkPalette())
-        self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }")
 ```
 
 ## Clickable Widgets
