@@ -7,15 +7,12 @@ from PyQt5.QtCore import (
 from PyQt5.QtWidgets import (
     QApplication,
     QFrame,
-    QInputDialog,
     QLabel,
-    QMessageBox,
     QWidget, 
     )
 
 from PyQt5.QtGui import (
     QColor,
-    QCursor,
     QPalette,
     )
 
