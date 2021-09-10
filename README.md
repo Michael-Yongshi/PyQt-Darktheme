@@ -2,7 +2,7 @@
 
 ## Version
 ### 1.2
-1.2.4   changed elements for tabs, radio buttons, and checkboxes
+1.2.4   changed elements for tabs, radio buttons, and checkboxes when they are disabled
 1.2.3   Changed folder name to darktheme
 ### 1.1
 1.1.1   Changed pip name to pyqt-darktheme
@@ -23,8 +23,6 @@ from darktheme.widget_template import DarkApplication
 ### How to
 ```
 class Application(DarkApplication):
-    """A Dark styled application."""
-
     def __init__(self, *__args):
         super().__init__(*__args)
 ```
@@ -34,11 +32,6 @@ class Application(DarkApplication):
 To import the dark themed widgets, i.e. a clickable label widget
 ```
 from darktheme.widget_template import QClickLabel
-```
-
-or to just import everything
-```
-from darktheme.widget_template import *
 ```
 
 ### How to
