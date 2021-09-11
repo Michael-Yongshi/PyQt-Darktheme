@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyqt-darktheme",
-    version="1.2.4",
+    version="1.2.5",
     author="Michael-Yongshi",
     author_email="4registration@outlook.com",
-    description="A dark theme desktop gui package",
+    description="A PyQt dark theme, clickable widgets and cursor decorators",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Michael-Yongshi/Gui-Dark-Theme",
