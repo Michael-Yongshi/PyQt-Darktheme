@@ -21,10 +21,11 @@ pip install pyqt-darktheme
 ### Import
 To import the dark theme as a class based on QPalette
 ```
-from darktheme.widget_template import DarkPalette
+from darktheme.widget_template import DarkApplication, DarkPalette
 ```
 
 ### Configure
+#### using DarkPalette
 Create a QApplication object and set the DarkPalette like below
 ```
 app = QApplication()
@@ -32,6 +33,12 @@ app.setPalette(DarkPalette())
 ```
 
 See the 'test_gui.py' file for an example how to make it configurable
+
+#### using DarkApplication
+For an application that is fixed in a dark theme, you can use the DarkApplication class
+```
+app = QDarkApplication()
+```
 
 ## How to use the Clickable Widgets
 ### Import
