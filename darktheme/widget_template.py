@@ -26,8 +26,8 @@ class DarkPalette(QPalette):
         self.setColor(QPalette.WindowText, QColor(255, 255, 255))   #white
         self.setColor(QPalette.Base, QColor(25, 25, 25))            #darker grey (selected text in pop up)
         self.setColor(QPalette.AlternateBase, QColor(53, 53, 53))   #dark grey (not used far as i can see)
-        self.setColor(QPalette.ToolTipBase, QColor(255, 255, 255))  #white
-        self.setColor(QPalette.ToolTipText, QColor(255, 255, 255))  #white
+        self.setColor(QPalette.ToolTipBase, QColor(100, 100, 100))  #medium grey (tooltip background)
+        self.setColor(QPalette.ToolTipText, QColor(255, 255, 255))  #white (tooltip text)
         self.setColor(QPalette.Text, QColor(255, 255, 255))         #white
         self.setColor(QPalette.Button, QColor(53, 53, 53))          #dark grey (drop down arrow colour and tabs)
         self.setColor(QPalette.ButtonText, QColor(255, 255, 255))   #white
@@ -37,21 +37,22 @@ class DarkPalette(QPalette):
         self.setColor(QPalette.HighlightedText, QColor(0, 0, 0))    #black
 
         # If item is disabled, use alternative colours
+        # self.setColor(QPalette.Disabled, QPalette.Light, QColor(100, 100, 100))
+        # self.setColor(QPalette.Disabled, QPalette.Shadow, QColor(255, 255, 255))
         self.setColor(QPalette.Disabled, QPalette.Button, QColor(53, 53, 53))       #dark grey
         self.setColor(QPalette.Disabled, QPalette.ButtonText, QColor(25, 25, 25))   #darker grey
-
+        self.setColor(QPalette.Disabled, QPalette.Base, QColor(53, 53, 53))          #dark grey
+        self.setColor(QPalette.Disabled, QPalette.Text, QColor(100, 100, 100))  #medium grey
+        self.setColor(QPalette.Disabled, QPalette.Window, QColor(53, 53, 53))          #dark grey
+        self.setColor(QPalette.Disabled, QPalette.WindowText, QColor(100, 100, 100))  #medium grey
 
 class DarkApplication(QApplication):
     """A Dark styled application."""
     def __init__(self, *__args):
         super().__init__(*__args)
         
-        self.setStyle("Fusion")
+        # self.setStyle("Fusion")
         self.setPalette(DarkPalette())
-        self.setStyleSheet("QToolTip { color: #ffffff; background-color: grey; border: 1px solid white; }"
-            "QCheckBox:disabled {color:#191919;}"
-            "QRadioButton:disabled {color:#191919;}"
-            "QWidget:disabled {color:#191919;}")
 
 class QClickWidget (QWidget):
     """A widget which is clickable"""
