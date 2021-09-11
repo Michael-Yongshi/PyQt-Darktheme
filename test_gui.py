@@ -14,6 +14,7 @@ from PyQt5.QtWidgets import (
     QLabel,
     QMainWindow,
     QMessageBox,
+    QProgressBar,
     QPushButton,
     QRadioButton,
     QTabWidget,
@@ -73,10 +74,17 @@ class CentralWidget(QWidget):
         self.middle_grid.setLayout(self.grid_layout)
 
         # add diverse set of elements in middle grid
-        self.text_box = QTextEdit(self)
+        self.tabs = QTabWidget()
+        self.tab = QWidget()
+        self.tabdis = QWidget()
+        self.tabs.addTab(self.tab, 'Normal tab')
+        self.tabs.addTab(self.tabdis, 'Disabled tab')
+        self.tabs.setTabEnabled(1, False)
 
         self.label_box = QLabel('label with tooltip', self)
         self.label_box.setToolTip('This is how a tooltip will look like')
+
+        self.text_box = QTextEdit(self)
 
         self.radiowidget = QWidget()
         self.radiolayout = QHBoxLayout()
@@ -102,12 +110,8 @@ class CentralWidget(QWidget):
         self.checklayout.addWidget(self.checkclicked)
         self.checklayout.addWidget(self.checkdis)
 
-        self.tabs = QTabWidget()
-        self.tab = QWidget()
-        self.tabdis = QWidget()
-        self.tabs.addTab(self.tab, 'Normal tab')
-        self.tabs.addTab(self.tabdis, 'Disabled tab')
-        self.tabs.setTabEnabled(1, False)
+        self.progress = QProgressBar()
+        self.progress.setValue(50)
 
         # (fromRow, fromColumn, rowSpan=1, columnSpan=1)
         self.grid_layout.addWidget(self.tabs, 0, 0)
@@ -115,6 +119,7 @@ class CentralWidget(QWidget):
         self.grid_layout.addWidget(self.text_box, 2, 0)
         self.grid_layout.addWidget(self.radiowidget, 1, 1)
         self.grid_layout.addWidget(self.checkwidget, 2, 1)
+        self.grid_layout.addWidget(self.progress, 3, 0, 1, 2)
 
         # set main layout
         self.theme_button = QPushButton('Switch Theme', self)
@@ -139,10 +144,10 @@ class CentralWidget(QWidget):
     def on_click_change_style(self):
 
         try:
-            app.setStyle(self.styles[app.style])
+            app.setStyle(app.styles[app.style])
         except:
             app.style = 0
-            app.setStyle(self.styles[app.style])
+            app.setStyle(app.styles[app.style])
         app.style += 1
 
 
