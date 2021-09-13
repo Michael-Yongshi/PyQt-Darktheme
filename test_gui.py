@@ -17,10 +17,11 @@ from PyQt5.QtWidgets import (
     QProgressBar,
     QPushButton,
     QRadioButton,
+    QStyleFactory,
     QTabWidget,
     QTextEdit,
     QVBoxLayout,
-    QWidget, 
+    QWidget,
     )
 
 from PyQt5.QtGui import (
@@ -126,7 +127,7 @@ class CentralWidget(QWidget):
         self.theme_button.setToolTip('This switches from light to dark theme')
         self.theme_button.clicked.connect(self.on_click_change_theme)
         self.style_button = QPushButton('Switch Style')
-        self.style_button.setToolTip('This switches the default OS styles')
+        self.style_button.setToolTip(f'This switches the default OS styles\nStyles are: {QStyleFactory.keys()}')
         self.style_button.clicked.connect(self.on_click_change_style)
         self.vertical_layout.addWidget(self.middle_grid)
         self.vertical_layout.addWidget(self.theme_button)
@@ -144,10 +145,10 @@ class CentralWidget(QWidget):
     def on_click_change_style(self):
 
         try:
-            app.setStyle(app.styles[app.style])
+            app.setStyle(QStyleFactory.keys()[app.style])
         except:
             app.style = 0
-            app.setStyle(app.styles[app.style])
+            app.setStyle(QStyleFactory.keys()[app.style])
         app.style += 1
 
 
