@@ -1,6 +1,8 @@
 # pyqt-darktheme
 A dark themed QPalette class for use in GUI's implemented using PyQt5, some many-used widgets that are by default clickable and decorators to change the mouse to an hourglass and back in certain circumstances.
 
+![darktheme](https://user-images.githubusercontent.com/39827427/133036509-759bc459-087a-4a1d-a86d-098c410de5bc.png)
+
 ## Test and examples
 Run the 'test_gui.py' file to see how it compares to the normal light theme and to test the library on your device.
 
