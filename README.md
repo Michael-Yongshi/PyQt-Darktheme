@@ -9,8 +9,11 @@ Run the 'test_gui.py' file to see how it compares to the normal light theme and 
 ## Version
 ### 1.2
 1.2.5   Added a test_gui to showcase the themes and for testing
+
 1.2.4   changed elements for tabs, radio buttons, and checkboxes when they are disabled
+
 1.2.3   Changed folder name to darktheme
+
 ### 1.1
 1.1.1   Changed pip name to pyqt-darktheme
 
