@@ -158,7 +158,7 @@ def run():
     global main
     main = TestMainWindow()
     main.showMaximized()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
 
 
 if __name__ == '__main__':
