@@ -1,5 +1,5 @@
 # pyqt-darktheme
-A dark themed QPalette class for use in GUI's implemented using PyQt5, some many-used widgets that are by default clickable and decorators to change the mouse to an hourglass and back in certain circumstances.
+A dark themed QPalette class for use in GUI's implemented using PyQt5 and PyQt6, some many-used widgets that are by default clickable and decorators to change the mouse to an hourglass and back in certain circumstances.
 
 ![darktheme](https://user-images.githubusercontent.com/39827427/133036509-759bc459-087a-4a1d-a86d-098c410de5bc.png)
 
@@ -8,6 +8,8 @@ Run the 'test_gui.py' (for pyqt5) or 'test_gui_pyqt6.py file to see how it compa
 
 ## Version
 ### 1.3
+1.3.1   Only some readme edits
+
 1.3.0   Added a pyqt6 implementation, but does not automatically install either PyQt5 or PyQt6 as you can now choose between them
 ### 1.2
 1.2.5   Added a test_gui to showcase the themes and for testing
@@ -27,6 +29,9 @@ pip install pyqt-darktheme
 ```
 
 ## How to use the dark theme
+
+See the 'test_gui.py' and 'test_gui_pyqt6.py' files for configuration examples
+
 ### Import
 To import the dark theme as a class based on QPalette
 
@@ -48,8 +53,6 @@ app = QApplication()
 app.setPalette(DarkPalette())
 ```
 
-See the 'test_gui.py' file for an example how to make it configurable
-
 #### using DarkApplication
 For an application that is fixed in a dark theme, you can use the DarkApplication class
 ```
@@ -59,8 +62,15 @@ app = QDarkApplication()
 ## How to use the Clickable Widgets
 ### Import
 To import the clickable widgets, i.e. a clickable label widget
+
+For PyQt5
 ```
 from darktheme.widget_template import QClickLabel
+```
+
+For PyQt6
+```
+from darktheme.widget_template_pyqt6 import QClickLabel
 ```
 
 ### Configure
@@ -126,7 +136,41 @@ def program():
     print(continue doing stuff and showing loading cursor)
 ```
 
-## License
+# Build
+
+## Pypirc file
+Create a .pypirc file in home directory
+
+```
+[distutils]
+index-servers=
+    pypi
+    test
+
+[test]
+repository = https://test.pypi.org/legacy/
+username = __token__
+password = <PyPI token>
+
+[pypi]
+repository = https://upload.pypi.org/legacy/
+username = __token__
+password = <PyPI token>
+```
+
+## Distributions
+
+```
+python3 -m pip install --upgrade build && python3 -m build
+```
+
+## Upload
+
+```
+python3 -m pip install --upgrade twine && python3 -m twine upload --repository pypi dist/*
+```
+
+# License
 
 Licensed under GPL-3.0-or-later, see LICENSE file for details.
 
