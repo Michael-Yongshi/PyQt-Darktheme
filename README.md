@@ -4,9 +4,11 @@ A dark themed QPalette class for use in GUI's implemented using PyQt5, some many
 ![darktheme](https://user-images.githubusercontent.com/39827427/133036509-759bc459-087a-4a1d-a86d-098c410de5bc.png)
 
 ## Test and examples
-Run the 'test_gui.py' file to see how it compares to the normal light theme and to test the library on your device.
+Run the 'test_gui.py' (for pyqt5) or 'test_gui_pyqt6.py file to see how it compares to the normal light theme and to test the library on your device.
 
 ## Version
+### 1.3
+1.3.0   Added a pyqt6 implementation, but does not automatically install either PyQt5 or PyQt6 as you can now choose between them
 ### 1.2
 1.2.5   Added a test_gui to showcase the themes and for testing
 
@@ -18,6 +20,8 @@ Run the 'test_gui.py' file to see how it compares to the normal light theme and 
 1.1.1   Changed pip name to pyqt-darktheme
 
 ## Install
+Make sure you have PyQt5 or PyQt6 installed
+
 ```
 pip install pyqt-darktheme
 ```
@@ -25,8 +29,15 @@ pip install pyqt-darktheme
 ## How to use the dark theme
 ### Import
 To import the dark theme as a class based on QPalette
+
+PyQt5
 ```
 from darktheme.widget_template import DarkApplication, DarkPalette
+```
+
+PyQt6
+```
+from darktheme.widget_template_pyqt6 import DarkApplication, DarkPalette
 ```
 
 ### Configure
@@ -65,8 +76,19 @@ def clicklabel:
 ## Decorators
 ### Import
 To import the decorators
+
+For PyQt5
 ```
 from darktheme.decorators import (
+    Decorators,
+    QInputDialogUserInterruption,
+    QMessageBoxUserInterruption,
+)
+```
+
+For PyQt6
+```
+from darktheme.decorators_pyqt6 import (
     Decorators,
     QInputDialogUserInterruption,
     QMessageBoxUserInterruption,
