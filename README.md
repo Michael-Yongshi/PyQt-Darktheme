@@ -36,26 +36,26 @@ See the 'test_gui.py' and 'test_gui_pyqt6.py' files for configuration examples
 To import the dark theme as a class based on QPalette
 
 PyQt5
-```
+```python
 from darktheme.widget_template import DarkApplication, DarkPalette
 ```
 
 PyQt6
-```
+```python
 from darktheme.widget_template_pyqt6 import DarkApplication, DarkPalette
 ```
 
 ### Configure
 #### using DarkPalette
 Create a QApplication object and set the DarkPalette like below
-```
+```python
 app = QApplication()
 app.setPalette(DarkPalette())
 ```
 
 #### using DarkApplication
 For an application that is fixed in a dark theme, you can use the DarkApplication class
-```
+```python
 app = QDarkApplication()
 ```
 
@@ -64,17 +64,17 @@ app = QDarkApplication()
 To import the clickable widgets, i.e. a clickable label widget
 
 For PyQt5
-```
+```python
 from darktheme.widget_template import QClickLabel
 ```
 
 For PyQt6
-```
+```python
 from darktheme.widget_template_pyqt6 import QClickLabel
 ```
 
 ### Configure
-```
+```python
 label = QClickLabel()
 label.setText('This label is clickable')
 label.clicked.connect(clicklabel)
@@ -88,7 +88,7 @@ def clicklabel:
 To import the decorators
 
 For PyQt5
-```
+```python
 from darktheme.decorators import (
     Decorators,
     QInputDialogUserInterruption,
@@ -97,7 +97,7 @@ from darktheme.decorators import (
 ```
 
 For PyQt6
-```
+```python
 from darktheme.decorators_pyqt6 import (
     Decorators,
     QInputDialogUserInterruption,
@@ -107,12 +107,12 @@ from darktheme.decorators_pyqt6 import (
 
 ### How to use normal decorators
 to add a loading cursor to a called method:
-```
+```python
 @Decorators.loading_cursor
 ```
 
 to revert back to normal cursor manually for some reason, i.e. to ask user for input:
-```
+```python
 @Decorators.user_input_interruption
 ```
 
@@ -122,18 +122,18 @@ Two dialogs are given that have the decorator 'user_input_interruption' built-in
 - QMessageBoxUserInterruption
 
 to use these dialogs:
-```
+```python
 @Decorators.loading_cursor
 def program():
 
-    print(doing stuff and showing loading cursor)
+    print("doing stuff and showing loading cursor")
 
     result, okPressed = QInputDialogUserInterruption.getText(
         self, "User input requested", "This dialog box shows a regular cursor, letting the user know input is requested")
     if result and okPressed:
         print(result)
     
-    print(continue doing stuff and showing loading cursor)
+    print("continue doing stuff and showing loading cursor")
 ```
 
 # Build
